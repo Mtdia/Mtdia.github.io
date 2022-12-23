@@ -4,7 +4,7 @@
   
   
   <entry>
-    <title>harbor Arm部署</title>
+    <title>harbor 容器部署</title>
     <link href="/2022/12/09/harbor-ArmInstall/"/>
     <url>/2022/12/09/harbor-ArmInstall/</url>
     
@@ -80,9 +80,9 @@
     
     <tags>
       
-      <tag>linux</tag>
-      
       <tag>ansible</tag>
+      
+      <tag>linux</tag>
       
     </tags>
     
@@ -159,9 +159,9 @@
     
     <tags>
       
-      <tag>awk</tag>
-      
       <tag>linux</tag>
+      
+      <tag>awk</tag>
       
     </tags>
     
@@ -346,9 +346,9 @@
     
     <tags>
       
-      <tag>awk</tag>
-      
       <tag>linux</tag>
+      
+      <tag>awk</tag>
       
     </tags>
     
