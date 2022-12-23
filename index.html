@@ -772,9 +772,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/linux/">#linux</a>
-            
               <a href="/tags/ansible/">#ansible</a>
+            
+              <a href="/tags/linux/">#linux</a>
             
           </div>
         
@@ -1066,9 +1066,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/awk/">#awk</a>
-            
               <a href="/tags/linux/">#linux</a>
+            
+              <a href="/tags/awk/">#awk</a>
             
           </div>
         
@@ -1144,9 +1144,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/awk/">#awk</a>
-            
               <a href="/tags/linux/">#linux</a>
+            
+              <a href="/tags/awk/">#awk</a>
             
           </div>
         
@@ -1309,6 +1309,29 @@
   
   
 </div>
+
+
+
+<!-- 网站运行天数统计 -->
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+    <script>
+        var now = new Date();
+        function createtime() {
+            var grt= new Date("10/20/2022 10:00:00");//此处修改你的建站时间或者网站上线时间
+            now.setTime(now.getTime()+250);
+            days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+            if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+            mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+            snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+            document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+            document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+        }
+    setInterval("createtime()",250);
+    </script>
+<!-- 网站运行天数统计-结尾 -->
+
 
   </footer>
 
