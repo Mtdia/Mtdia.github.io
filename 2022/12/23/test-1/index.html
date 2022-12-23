@@ -16,12 +16,12 @@
   <meta name="author" content="Mtdia">
   <meta name="keywords" content="">
   
-    <meta name="description" content="test test 1123">
+    <meta name="description" content="Here&#39;s something encrypted, password is required to continue reading.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello World">
 <meta property="og:url" content="https://mtdia.github.io/2022/12/23/test-1/index.html">
 <meta property="og:site_name" content="MT-Platform">
-<meta property="og:description" content="test test 1123">
+<meta property="og:description" content="Here&#39;s something encrypted, password is required to continue reading.">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-12-23T09:18:02.000Z">
 <meta property="article:modified_time" content="2022-12-23T09:23:50.465Z">
@@ -436,7 +436,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          12 字
+          987 字
         
       </span>
     
@@ -447,7 +447,7 @@
         
         
         
-          1 分钟
+          9 分钟
         
       </span>
     
@@ -751,15 +751,22 @@
             <h1 style="display: none">Hello World</h1>
             
             
-              <div class="markdown-body">
-                
-                <h1 id="test"><a href="#test" class="headerlink" title="test"></a>test</h1><hr>
-<p><strong>test</strong></p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">123<br></code></pre></td></tr></table></figure>
+              
+              <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="d6d0a8dbec6b66fd9fd0cdf2c9d262aae9c4e69bb7e2ddc47d91ca5314cd0bf6">9733772a15982d57a56b30e0e9129566995c5661fb3c7e6892ac7fa4e38cf73c69f3721387effd973ddf89a82e3b7a0a099f2018b6f87c60a7cc0f77fdf24fc3a3f5bc70f96ddea962ed46ef6131d28662458239400151b3dd3e4523dd4523335cff3005f2ea2131faf1a97a280ca0c206db9085e8c20fd0471263af91f374e1d7d43c1ebb2709ae7bb8f2a9d4b88795938296002adab14b0eb836da01a7231c4aed34556682105d460c33807dff783939f21a3862d356ebb8e95a5322ed72e6de8a602c2af26f4e3c56fc6c5b0587c93ef5b062d22ae142085194c70d485e5cf265e7843959842e3ab11b367a11010162843f2ba9b432c8ca2381a40a4d5ce5425b163594b666f92632e88c71ba79b6c31c843697dca032ae1df3b654cd26d6948b10a0a71267045058a1f5818aeb8e71bea365d45cc9ef4598f54b0b43571fdc0d4b60eb9f685a22896078f9e9ddbd943ffe71fd675ac13dd20a8bec5f54319a285d69858bd87b8f09c41ded17a5f438013aca48e0eaf14e19f69f55e3b01dba33cbc629e77f9772ac80be0c51ef62c71426ba901b32570da685c984f18a1b5ed894a11ea20157b389ae0c5151f44a8a7b239752efb2e867017c5040b950a743786f73facd314c10ccee9859986bcf5d99432ccd00b6764fa54aece4cc7a3c</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+              
 
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
-                
-              </div>
+              
             
             <hr/>
             <div>
@@ -1061,6 +1068,23 @@
     });
   });
 </script>
+
+
+  
+  <script defer>
+    if (document.getElementById('hbePass')) {
+      Fluid.utils.waitElementLoaded('hbe-prefix', function() {
+        var hbePrefix = document.querySelector('hbe-prefix');
+        hbePrefix.parentElement.classList.add('markdown-body');
+        Fluid.utils.retry(function() {
+          if (Fluid.boot && Fluid.boot.refresh) {
+            Fluid.boot.refresh();
+            return true;
+          }
+        }, 100, 10);
+      })
+    }
+  </script>
 
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
