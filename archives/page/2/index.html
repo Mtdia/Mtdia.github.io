@@ -419,21 +419,6 @@
 </div>
 
 
-<!-- 文章加密 -->
-<script>
-    (function(){
-        if('{{ page.password }}'){
-            if (prompt('请输入密码') !== '{{ page.password }}'){
-                alert('密码错误');
-                history.back();
-            }
-        }
-    })();
-</script>
-<!-- 文章加密-结尾 -->
-
-
-
 <!-- 天知天气-北京 -->
 <div id="tp-weather-widget"></div>
   <script>
@@ -695,13 +680,19 @@
                 
 
 <div class="list-group">
-  <p class="h4">共计 15 篇文章</p>
+  <p class="h4">共计 16 篇文章</p>
   <hr>
   
   
     
       
       <p class="h5">2022</p>
+    
+    <a href="/2022/10/22/awk/" class="list-group-item list-group-item-action">
+      <time>10-22</time>
+      <div class="list-group-item-title">Awk 命令</div>
+    </a>
+  
     
     <a href="/2022/10/21/bash/" class="list-group-item list-group-item-action">
       <time>10-21</time>
