@@ -423,6 +423,21 @@
 </div>
 
 
+<!-- 文章加密 -->
+<script>
+    (function(){
+        if('{{ page.password }}'){
+            if (prompt('请输入密码') !== '{{ page.password }}'){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+<!-- 文章加密-结尾 -->
+
+
+
 <!-- 天知天气-北京 -->
 <div id="tp-weather-widget"></div>
   <script>
@@ -986,9 +1001,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/linux/">#linux</a>
-            
               <a href="/tags/ansible/">#ansible</a>
+            
+              <a href="/tags/linux/">#linux</a>
             
           </div>
         
@@ -1280,9 +1295,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/awk/">#awk</a>
-            
               <a href="/tags/linux/">#linux</a>
+            
+              <a href="/tags/awk/">#awk</a>
             
           </div>
         
@@ -1358,9 +1373,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/awk/">#awk</a>
-            
               <a href="/tags/linux/">#linux</a>
+            
+              <a href="/tags/awk/">#awk</a>
             
           </div>
         

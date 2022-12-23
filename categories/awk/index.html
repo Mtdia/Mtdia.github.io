@@ -419,6 +419,21 @@
 </div>
 
 
+<!-- 文章加密 -->
+<script>
+    (function(){
+        if('{{ page.password }}'){
+            if (prompt('请输入密码') !== '{{ page.password }}'){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+<!-- 文章加密-结尾 -->
+
+
+
 <!-- 天知天气-北京 -->
 <div id="tp-weather-widget"></div>
   <script>
