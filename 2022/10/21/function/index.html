@@ -16,23 +16,24 @@
   <meta name="author" content="Mtdia">
   <meta name="keywords" content="">
   
-    <meta name="description" content="终端变量自定义及 vim 编辑器相关配置内容">
+    <meta name="description" content="CentOS 函数相关操作">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Bash变量">
-<meta property="og:url" content="https://mtdia.github.io/2022/10/24/bash/index.html">
+<meta property="og:title" content="CentOS 函数">
+<meta property="og:url" content="https://mtdia.github.io/2022/10/21/function/index.html">
 <meta property="og:site_name" content="MT-Platform">
-<meta property="og:description" content="终端变量自定义及 vim 编辑器相关配置内容">
+<meta property="og:description" content="CentOS 函数相关操作">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-10-24T06:19:54.000Z">
-<meta property="article:modified_time" content="2022-12-20T05:30:01.687Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200620115608308.png">
+<meta property="article:published_time" content="2022-10-21T05:57:54.000Z">
+<meta property="article:modified_time" content="2022-12-23T05:21:08.944Z">
 <meta property="article:author" content="Mtdia">
 <meta property="article:tag" content="linux">
-<meta property="article:tag" content="bash">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200620115608308.png">
   
   
   
-  <title>Bash变量 - MT-Platform</title>
+  <title>CentOS 函数 - MT-Platform</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -409,7 +410,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Bash变量"></span>
+            <span id="subtitle" data-typed-text="CentOS 函数"></span>
           
         </div>
 
@@ -420,8 +421,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-10-24 14:19" pubdate>
-          2022年10月24日 下午
+        <time datetime="2022-10-21 13:57" pubdate>
+          2022年10月21日 下午
         </time>
       </span>
     
@@ -514,41 +515,91 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Bash变量</h1>
+            <h1 style="display: none">CentOS 函数</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="bashrc-vimrc"><a href="#bashrc-vimrc" class="headerlink" title="bashrc/vimrc"></a>bashrc/vimrc</h1><p><strong><code>vim /root/.vimrc</code></strong></p>
-<div class='spoiler collapsed'>
-    <div class='spoiler-title'>
-        代码折叠，点击展开
-    </div>
-    <div class='spoiler-content'>
-        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><code class="hljs `bash">set ignorecase<br>set cursorline<br>set autoindent<br>autocmd BufNewFile *.sh exec &quot;:call SetTitle()&quot;<br>func SetTitle()<br>	if expand(&quot;%:e&quot;) == &#x27;sh&#x27;<br>	call setline(1,&quot;#!/bin/bash&quot;)<br>	call setline(2,&quot;###########################################&quot;)<br>	call setline(3,&quot;#Author: Mxxxxxia                         ##&quot;)<br>	call setline(4,&quot;#QQ： 1xxxxxxx59                          #####&quot;)<br>	call setline(5,&quot;#Date： &quot;.strftime(&quot;%Y-%m-%d               &quot;))<br>	call setline(6,&quot;#Mage Education:   Mxxxxxxxxx             ###############&quot;)<br>	call setline(7,&quot;#FileName： &quot;.expand(&quot;%&quot;))<br>	call setline(8,&quot;#URL： https://Mtdia.github.io            #####&quot;)<br>	call setline(9,&quot;#Description： The test script            ##&quot;)<br>	call setline(10,&quot;###########################################&quot;)<br>	call setline(11,&quot;&quot;)<br>	endif<br>	endfunc<br>	autocmd BufNewFile * normal G<br><br>set hlsearch                    &quot;文本文件中 vim 搜索关键词高亮显示<br>set clipboard=unnamed           &quot; 设置vim中默认使用选择缓冲区寄存器,y复制,p粘贴<br>set pastetoggle=&lt;F1&gt;	        &quot; 斩杀复制粘贴时产生的恶心的缩进<br>set ai                          &quot; 自动缩进，新行与前面的行保持—致的自动空格<br>set cursorline                  &quot; 显示光标行<br>set aw                          &quot; 自动写，转入shell或使用：n编辑其他文件时，当前的缓冲区被写入<br>set flash                       &quot; 在出错处闪烁但不呜叫(缺省)<br>set ic                          &quot; 在查询及模式匹配时忽赂大小写<br>set number                      &quot; 屏幕左边显示行号<br>set showmatch                   &quot; 显示括号配对，当键入“]”“)”时，高亮度显示匹配的括号<br>set showmode                    &quot; 处于文本输入方式时加亮按钮条中的模式指示器<br>set warn                        &quot; 对文本进行了新的修改后，离开shell时系统给出显示(缺省)<br>set ws                          &quot; 在搜索时如到达文件尾则绕回文件头继续搜索<br>set wrap                        &quot; 长行显示自动折行<br>colorscheme evening             &quot; 设定背景为夜间模式<br>filetype plugin on              &quot; 自动识别文件类型，自动匹配对应的, “文件类型Plugin.vim”文件，使用缩进定义文件<br>set autoindent                  &quot; 设置自动缩进：即每行的缩进值与上一行相等；使用 noautoindent 取消设置<br>set cindent                     &quot; 以C/C++的模式缩进<br>set noignorecase                &quot; 默认区分大小写<br>set ruler                       &quot; 打开状态栏标尺<br>set scrolloff=5                 &quot; 设定光标离窗口上下边界 5 行时窗口自动滚动<br>set shiftwidth=4                &quot; 设定 &lt;&lt; 和 &gt;&gt; 命令移动时的宽度为 4<br>set softtabstop=4               &quot; 使得按退格键时可以一次删掉 4 个空格,不足 4 个时删掉所有剩下的空格）<br>set tabstop=4                   &quot; 设定 tab 长度为 4<br>set wrap                        &quot; 自动换行显示<br>syntax enable<br>syntax on                       &quot; 自动语法高亮<br>set autoindent                  &quot;自动对齐<br>set smartindent                 &quot;智能对齐<br>set mouse=a                     &quot;使用鼠标<br>&quot;set mouse=v                    &quot;使用鼠标选定复制<br>&quot;inoremap ( ()&lt;ESC&gt;i            &quot;括号自动补齐&quot;&gt;<br>&quot;inoremap [ []&lt;ESC&gt;i<br>&quot;inoremap &#123; &#123;&#125;&lt;ESC&gt;i<br>&quot;inoremap &lt; &lt;&gt;&lt;ESC&gt;i<br></code></pre></td></tr></table></figure>
-    </div>
-</div>
-<hr>
-<p><strong><code>vim /root/.bashrc</code></strong></p>
-<div class='spoiler collapsed'>
-    <div class='spoiler-title'>
-        代码折叠，点击展开
-    </div>
-    <div class='spoiler-content'>
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">alias</span> lll=<span class="hljs-string">&#x27;ls -lAFhi&#x27;</span><br><span class="hljs-built_in">alias</span> ll=<span class="hljs-string">&#x27;ls -lAFh&#x27;</span><br><span class="hljs-built_in">alias</span> l=<span class="hljs-string">&#x27;ls -aF&#x27;</span><br><span class="hljs-built_in">alias</span> ld=<span class="hljs-string">&#x27;ls -ldh&#x27;</span><br><span class="hljs-built_in">alias</span> la=<span class="hljs-string">&#x27;ls -A&#x27;</span><br><span class="hljs-built_in">alias</span> cdd=<span class="hljs-string">&#x27;cd /data/&#x27;</span><br><span class="hljs-built_in">alias</span> cde=<span class="hljs-string">&#x27;cd /etc/&#x27;</span><br><span class="hljs-built_in">alias</span> cdh=<span class="hljs-string">&#x27;cd /home/&#x27;</span><br><br><span class="hljs-built_in">alias</span> c=clear<br><span class="hljs-built_in">alias</span> d=<span class="hljs-string">&#x27;date +%F/%X&#x27;</span><br>HISTTIMEFORMAT=<span class="hljs-string">&#x27;%F %T  &lt;====&gt;  &#x27;</span><br>HISTIGNORE=<span class="hljs-string">&#x27;ignoredups,ignorespace&#x27;</span><br><span class="hljs-comment"># PS1=&#x27;\[\e[36;40m\][\u@\h \W]\$\e[m &#x27;  </span><br><br><span class="hljs-comment"># PS1=&#x27;$&#123;debian_chroot:+($debian_chroot)&#125;\[\033[01;31;1m\]\u\[\033[00;33;1m\]@\[\033[01;34;1m\]\h\[\033[00;33;1m\]:\[\033[00;32;1m\]\w \[\033[01;36;1m\]\$ \[\033[0;35;1m\]&#x27; </span><br><br><span class="hljs-comment"># PS1=&#x27;$&#123;debian_chroot:+($debian_chroot)&#125;\[\033[0;35;1m\][\[\033[01;31;1m\]\u\[\033[00;33;1m\]@\[\033[01;34;1m\]\h\[\033[00;33;1m\]: \[\033[00;32;1m\]\w\[\033[0;35;1m\]]\033[01;36;1m\]\$ \[\033[0;35;3m\]&#x27;</span><br><br>PS1=<span class="hljs-string">&#x27;$&#123;debian_chroot:+($debian_chroot)&#125;\[\033[0;35;1m\]&#123;\[\033[01;31;1m\]\u\[\033[00;33;1m\]@\[\033[01;34;1m\]\h\[\033[00;33;1m\]: \[\    033[00;32;1m\]\w \[\033[01;39;1m\]\A \[\033[0;35;1m\]&#125;\[\033[01;36;1m\]\$ \[\033[01;36;1m\]==&gt; \[\033[0;35;0m\]&#x27;</span><br><span class="hljs-comment">#PS1=&#x27;$&#123;debian_chroot:+($debian_chroot)&#125;\[\033[0;35;1m\][\[\033[01;31;1m\]\u\[\033[00;33;1m\]@\[\033[01;34;1m\]\h\[\033[00;33;1m\]: \[\033[00;32;1m\]\w \[\033[01;39;1m\]\A \[\033[0;35;1m\]]\[\033[01;36;1m\]\$ \[\033[01;36;1m\]==&gt; \[\033[0;35;0m\]&#x27;</span><br></code></pre></td></tr></table></figure>
-    </div>
-</div>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">使文件生效<br>退出vim后，输入：<span class="hljs-built_in">source</span> ~/.bashrc 或者 . ~./bashrc<br></code></pre></td></tr></table></figure>
+                <h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a><strong>函数</strong></h1><hr>
+<h2 id="函数-1"><a href="#函数-1" class="headerlink" title="函数"></a><strong>函数</strong></h2><ul>
+<li><p><code>函数由两部分组成 ：函数名和函数体</code></p>
+</li>
+<li><p><strong>格式</strong> ：</p>
+<ul>
+<li><p>语法一 ：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-function"><span class="hljs-title">f_name</span></span> ()&#123;<br>...函数体...<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li><p>语法二 ：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">function</span> f_name &#123;<br>    ...函数体...<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li><p>语法三 ：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">function</span> <span class="hljs-function"><span class="hljs-title">f_name</span></span>()&#123;<br>    ...函数体...<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>函数function是由若干条shell命令组成的语句块，实现代码重用和模块化编程</p>
+</li>
+<li><p>函数function并不是一个单独的进程，不能独立运行；它是shell程序的一部分</p>
+</li>
+<li><p>函数与shell程序的区别 ：</p>
+<ul>
+<li>shell程序在子shell中运行</li>
+<li> 函数在当前shell中运行</li>
+</ul>
+</li>
+<li><p>删除shell函数 ：unset function_name</p>
+</li>
+</ul>
+<p><strong>示例</strong> ：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#切换至etc目录</span><br>    [root@CentOS7 data]<span class="hljs-comment"># fk()&#123;</span><br>    &gt; <span class="hljs-built_in">cd</span> /etc<br>    &gt; &#125;<br>    [root@CentOS7 data]<span class="hljs-comment"># fk</span><br>    [root@CentOS7 etc]<span class="hljs-comment">#</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#删除该函数</span><br><span class="hljs-comment">#或者用户退出系统后，自动删除</span><br>    [root@CentOS7 etc]<span class="hljs-comment"># unset fk</span><br>    [root@CentOS7 etc]<span class="hljs-comment"># fk</span><br>    bash: fk: <span class="hljs-built_in">command</span> not found...<br>    Similar <span class="hljs-built_in">command</span> is: <span class="hljs-string">&#x27;fc&#x27;</span><br>    [root@CentOS7 etc]<span class="hljs-comment"># </span><br></code></pre></td></tr></table></figure>
+<p><strong>在脚本中定义及使用函数</strong></p>
+<ul>
+<li>函数在使用前必须定义，因此应将函数定义放在脚本开始部分，直至shell首次发现它后才能使用</li>
+<li>调用函数仅使用其函数名即可</li>
+</ul>
+<p><strong>使用函数检查磁盘最大使用率</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@CentOS7 etc]<span class="hljs-comment"># vim max_disk.sh </span><br><span class="hljs-comment">#!/bin/bash</span><br><span class="hljs-comment"># Maximum disk occupancy </span><br><span class="hljs-function"><span class="hljs-title">maxdf</span></span>()<br>&#123;<br><span class="hljs-built_in">echo</span> `<span class="hljs-built_in">df</span> -h |grep <span class="hljs-string">&quot;^/dev/sd&quot;</span>|<span class="hljs-built_in">tr</span> -s <span class="hljs-string">&quot; &quot;</span> |<span class="hljs-built_in">cut</span> -d<span class="hljs-string">&quot; &quot;</span> -f5 |<span class="hljs-built_in">sort</span> -n |<span class="hljs-built_in">cut</span> -d<span class="hljs-string">&quot;%&quot;</span> -f1 |<span class="hljs-built_in">tail</span> -1`<br>&#125;<br>    <span class="hljs-built_in">echo</span> Maxdf=`maxdf`<br><br><span class="hljs-comment">#运行脚本</span><br>[root@CentOS7 etc]<span class="hljs-comment"># sh max_disk.sh </span><br>Maxdf=17<br></code></pre></td></tr></table></figure>
+<ul>
+<li>使子进程也可使用 ：<ul>
+<li><code>声明</code>：export -f function_name</li>
+<li><code>查看 </code>：export -f 或 declare -xf</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@CentOS7 ~]<span class="hljs-comment"># go()&#123;     #创建一个函数</span><br>&gt; <span class="hljs-built_in">cd</span> /data/scripts/<br>&gt; <span class="hljs-built_in">ls</span><br>&gt; \<span class="hljs-built_in">rm</span> *<br>&gt; <span class="hljs-built_in">touch</span> firstfun<br>&gt; <span class="hljs-built_in">echo</span> &#123;1..9&#125; &gt; firstfun<br>&gt; &#125;<br><br>[root@CentOS7 ~]<span class="hljs-comment"># export -f go  #声明该函数在其子进程依旧有效</span><br><br>[root@CentOS7 ~]<span class="hljs-comment"># export -f     #查看函数</span><br><span class="hljs-function"><span class="hljs-title">go</span></span> () <br>&#123; <br>    <span class="hljs-built_in">cd</span> /data/scripts/;<br>    <span class="hljs-built_in">ls</span> --color=auto;<br>    \<span class="hljs-built_in">rm</span> *;<br>    <span class="hljs-built_in">touch</span> firstfun;<br>    <span class="hljs-built_in">echo</span> &#123;1..9&#125; &gt; firstfun<br>&#125;<br><span class="hljs-built_in">declare</span> -fx go<br><br>[root@CentOS7 ~]<span class="hljs-comment"># go    #执行一次该函数</span><br>f1.apk  f2.apk  f3.apk  f4.apk  f5.apk  f6.apk  f7.apk  f8.apk  f9.apk<br><br>[root@CentOS7 scripts]<span class="hljs-comment"># ls</span><br>firstfun<br><br>[root@CentOS7 scripts]<span class="hljs-comment"># cat firstfun </span><br>1 2 3 4 5 6 7 8 9<br><br>[root@CentOS7 scripts]<span class="hljs-comment"># unset go    #删除该函数</span><br><br>[root@CentOS7 scripts]<span class="hljs-comment"># export -f   #重新查看该函数</span><br><br>[root@CentOS7 scripts]<span class="hljs-comment"># go      #重新执行该函数</span><br>bash: go: <span class="hljs-built_in">command</span> not found...<br><br>[root@CentOS7 scripts]<span class="hljs-comment"># export -f go    #重新声明该函数</span><br>-bash: <span class="hljs-built_in">export</span>: go: not a <span class="hljs-keyword">function</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li><strong>或者</strong></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@CentOS7 scripts]<span class="hljs-comment"># hello()&#123;</span><br>&gt; <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;hello,are you ok?&quot;</span><br>&gt; &#125;<br><br>[root@CentOS7 scripts]<span class="hljs-comment"># vim hello_fun.sh</span><br><span class="hljs-comment">#!/bin/bash</span><br><span class="hljs-function"><span class="hljs-title">haha</span></span>()&#123;<br>hello<br>&#125;<br><span class="hljs-built_in">echo</span> `haha`<br><br>[root@CentOS7 scripts]<span class="hljs-comment"># export -f hello</span><br><br><span class="hljs-comment">#运行脚本</span><br>[root@CentOS7 scripts]<span class="hljs-comment"># sh hello_fun.sh</span><br>hello,are you ok?<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>又或者</strong></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@CentOS7 scripts]<span class="hljs-comment"># vim one.sh </span><br><br><span class="hljs-comment">#!/bin/bash</span><br><span class="hljs-function"><span class="hljs-title">one</span></span> ()<br>&#123;<br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;let&#x27;s go to play computer?&quot;</span><br>&#125;<br><br>[root@CentOS7 scripts]<span class="hljs-comment"># vim two.sh </span><br><br><span class="hljs-comment">#!/bin/bash</span><br><span class="hljs-function"><span class="hljs-title">two</span></span> ()<br>&#123;<br>one<br>three<br>&#125;<br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;`two`&quot;</span>    <span class="hljs-comment">#添加&quot; &quot;可保留原有格式，而非打印在同一行</span><br><br>[root@CentOS7 scripts]<span class="hljs-comment"># vim three.sh</span><br><br><span class="hljs-comment">#!/bin/bash</span><br><span class="hljs-function"><span class="hljs-title">three</span></span> ()<br>&#123;<br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;That&#x27;s good idea.&quot;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>若未执行 export -f function_name 则会出现 ：</strong></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#运行脚本</span><br>[root@CentOS7 scripts]<span class="hljs-comment"># sh two.sh </span><br>two.sh: line 3: one: <span class="hljs-built_in">command</span> not found<br>two.sh: line 4: three: <span class="hljs-built_in">command</span> not found<br><br>[root@CentOS7 scripts]<span class="hljs-comment"># </span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>所以</strong></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@CentOS7 scripts]<span class="hljs-comment"># . one.sh </span><br>[root@CentOS7 scripts]<span class="hljs-comment"># . three.sh</span><br>[root@CentOS7 scripts]<span class="hljs-comment"># export -f one</span><br>[root@CentOS7 scripts]<span class="hljs-comment"># export -f three</span><br><br><span class="hljs-comment">#运行脚本</span><br>[root@CentOS7 scripts]<span class="hljs-comment"># sh two.sh </span><br><span class="hljs-built_in">let</span><span class="hljs-string">&#x27;s go to play computer?</span><br><span class="hljs-string">That&#x27;</span>s good idea.<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>批量创建用户</strong></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#准备用户名单</span><br>[root@CentOS7 data]<span class="hljs-comment"># vim name.txt </span><br>lisuo<br>laowang<br><br>[root@CentOS7 data]<span class="hljs-comment"># vim batch_user2.sh </span><br><span class="hljs-comment">#!/bin/bash</span><br>. /etc/init.d/functions<br><span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> = <span class="hljs-string">&#x27;-c&#x27;</span> ];<span class="hljs-keyword">then</span><br>        <span class="hljs-keyword">for</span> USER <span class="hljs-keyword">in</span> `<span class="hljs-built_in">cat</span> /data/name.txt`;<span class="hljs-keyword">do</span><br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">id</span> <span class="hljs-variable">$USER</span> &amp;&gt; /dev/null;<span class="hljs-keyword">then</span><br>action <span class="hljs-string">&quot;<span class="hljs-variable">$USER</span> is exist.&quot;</span> <span class="hljs-literal">false</span><br><span class="hljs-keyword">else</span><br>useradd <span class="hljs-variable">$USER</span><br>        <span class="hljs-built_in">echo</span> <span class="hljs-variable">$USER</span> | passwd --stdin <span class="hljs-variable">$USER</span> &amp;&gt; /dev/null<br>action <span class="hljs-string">&quot;<span class="hljs-variable">$USER</span> is created.&quot;</span> <span class="hljs-literal">true</span><br><span class="hljs-keyword">fi</span><br><span class="hljs-keyword">done</span><br>        <span class="hljs-keyword">elif</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> = <span class="hljs-string">&#x27;-r&#x27;</span> ];<span class="hljs-keyword">then</span><br><span class="hljs-keyword">for</span> USER <span class="hljs-keyword">in</span> `<span class="hljs-built_in">cat</span> /data/name.txt`;<span class="hljs-keyword">do</span><br>userdel -r <span class="hljs-variable">$USER</span> &amp;&gt; /dev/null<br>        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$USER</span> is removed.&quot;</span><br><span class="hljs-keyword">done</span><br><span class="hljs-keyword">else</span><br>        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Usage: `basename <span class="hljs-variable">$0</span>` -c |-r &quot;</span><br><span class="hljs-keyword">fi</span><br><br><span class="hljs-comment">#运行脚本</span><br>[root@CentOS7 data]<span class="hljs-comment"># sh batch_user2.sh -r</span><br>lisuo is removed.<br>laowang is removed.<br><br><span class="hljs-comment">#运行脚本</span><br>[root@CentOS7 data]<span class="hljs-comment"># sh batch_user2.sh -c</span><br>lisuo is created.                                          [  OK  ]<br>laowang is created.                                        [  OK  ]<br>[root@CentOS7 data]<span class="hljs-comment"># </span><br><br><span class="hljs-comment">#查看执行脚本后是否成功创建用户</span><br>[root@CentOS7 data]<span class="hljs-comment"># cat /etc/passwd</span><br>....................................<br>lisuo:x:1002:1002::/home/lisuo:/bin/bash<br>laowang:x:1009:1009::/home/laowang:/bin/bash<br></code></pre></td></tr></table></figure>
 
 <hr>
-<div class='spoiler collapsed'>
-    <div class='spoiler-title'>
-        代码折叠，点击展开
-    </div>
-    <div class='spoiler-content'>
-        <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs html">颜色代码:<br>字背景颜色: 40–49 字体颜色: 30—39<br>40: 黑 　　　　　　 30: 黑<br>41: 红 　　　　　　 31: 红<br>42: 绿 　　　　　　 32: 绿<br>43: 黄 　　　　　　 33: 黄<br>44: 蓝 　　　　　　 34: 蓝<br>45: 紫 　　　　　　 35: 紫<br>46: 深绿 　　　　　　 36: 深绿<br>47: 白色 　　　　　　 37: 白色<br><br>ANSI控制码:<br>\033[0m 关闭所有属性<br>\033[1m 设置高亮度<br>\033[3m 斜体字符<br>\033[4m 下划线<br>\033[5m 闪烁<br>\033[7m 反显<br>\033[8m 消隐<br>\033[30m – \033[37m 设置前景色<br>\033[40m – \033[47m 设置背景色<br>\033[nA 光标上移n行<br>\03[nB 光标下移n行<br>\033[nC 光标右移n行<br>\033[nD 光标左移n行<br><br>默认的特殊符号所代表的意义：<br>\d ：代表日期，格式为weekday month date，例如：“Mon Aug 1”<br>\H ：完整的主机名称。例如：我的机器名称为：fc4.linux，则这个名称就是fc4.linux<br>\h ：仅取主机的第一个名字，如上例，则为fc4，.linux则被省略<br>\t ：显示时间为24小时格式，如：HH：MM：SS<br>\T ：显示时间为12小时格式<br>\A ：显示时间为24小时格式：HH：MM<br>\u ：当前用户的账号名称<br>\v ：BASH的版本信息<br>\w ：完整的工作目录名称。家目录会以 ~代替<br>\W ：利用basename取得工作目录名称，所以只会列出最后一个目录<br># ：下达的第几个命令<br>$ ：提示字符，如果是root时，提示符为：# ，普通用户则为：$<br><br>echo -e &quot;\033[32m输出绿色字符串\033[0m&quot;<br>echo -e &quot;\033[43;35m输出黄色背景绿色字符串\033[0m&quot;<br>echo -e &quot;\033[1;43;35m输出高亮黄色背景绿色字符串\033[0m&quot;<br>echo -e &quot;\033[5;43;35m输出闪烁黄色背景绿色字符串\033[0m&quot;<br></code></pre></td></tr></table></figure>
-    </div>
-</div>
+<p><strong>在centos中，函数保存在 <code>/etc/init.d/functions</code> 中，在脚本中<code>调用某函数之前</code></strong><br><strong>需要进行其<code>声明</code>，否则无法正常调用；系统中除了内置函数之外，用户也也可以编写函数、声明函数、调用函数；</strong></p>
+<hr>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#过滤搜索action函数关键词与其之后10行显示</span><br>[root@C7-3 data]<span class="hljs-comment"># grep -A10 &quot;^action&quot; /etc/init.d/functions </span><br><span class="hljs-function"><span class="hljs-title">action</span></span>() &#123;<br>    <span class="hljs-built_in">local</span> STRING rc<br><br>    STRING=<span class="hljs-variable">$1</span><br>    <span class="hljs-built_in">echo</span> -n <span class="hljs-string">&quot;<span class="hljs-variable">$STRING</span> &quot;</span><br>    <span class="hljs-built_in">shift</span><br>    <span class="hljs-string">&quot;<span class="hljs-variable">$@</span>&quot;</span> &amp;&amp; success $<span class="hljs-string">&quot;<span class="hljs-variable">$STRING</span>&quot;</span> || failure $<span class="hljs-string">&quot;<span class="hljs-variable">$STRING</span>&quot;</span><br>    rc=$?<br>    <span class="hljs-built_in">echo</span><br>    <span class="hljs-built_in">return</span> <span class="hljs-variable">$rc</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#删除函数</span><br><span class="hljs-built_in">unset</span> function_name<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@C7-3 data]<span class="hljs-comment"># cat test.sh </span><br><span class="hljs-comment">#!/bin/bash</span><br>. /etc/init.d/functions    <span class="hljs-comment">#声明函数</span><br><span class="hljs-keyword">if</span> [ <span class="hljs-variable">$1</span> = 0 ];<span class="hljs-keyword">then</span>         <span class="hljs-comment">#$1为脚本名后输入的第一个参数</span><br>action <span class="hljs-string">&quot;<span class="hljs-variable">$1</span> is good!&quot;</span> <span class="hljs-literal">true</span>  <span class="hljs-comment">#调用action 打印结果</span><br><span class="hljs-keyword">else</span><br>action <span class="hljs-string">&quot;<span class="hljs-variable">$1</span> is bad!&quot;</span> <span class="hljs-literal">false</span><br><span class="hljs-keyword">fi</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@C7-3 data]<span class="hljs-comment"># bash test.sh 0</span><br>0 is good!                                                 [  OK  ]<br>[root@C7-3 data]<span class="hljs-comment"># bash test.sh 1</span><br>1 is bad!                                                  [FAILED]<br></code></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200620115608308.png" srcset="/img/loading.gif" lazyload></p>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
                 
               </div>
@@ -570,13 +621,6 @@
   <a href="/categories/linux/" class="category-chain-item">linux</a>
   
   
-    <span>></span>
-    
-  <a href="/categories/linux/bash/" class="category-chain-item">bash</a>
-  
-  
-
-  
 
       </span>
     
@@ -591,8 +635,6 @@
       
         <a href="/tags/linux/">#linux</a>
       
-        <a href="/tags/bash/">#bash</a>
-      
     </div>
   
 </div>
@@ -603,8 +645,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Bash变量</div>
-      <div>https://mtdia.github.io/2022/10/24/bash/</div>
+      <div>CentOS 函数</div>
+      <div>https://mtdia.github.io/2022/10/21/function/</div>
     </div>
     <div class="license-meta">
       
@@ -616,7 +658,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年10月24日</div>
+          <div>2022年10月21日</div>
         </div>
       
       
@@ -648,9 +690,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/10/24/k8s/" title="K8S单机部署">
+                      <a href="/2022/10/21/bash/" title="Bash变量">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">K8S单机部署</span>
+                        <span class="hidden-mobile">Bash变量</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -658,8 +700,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/10/21/awk/" title="Awk 命令">
-                        <span class="hidden-mobile">Awk 命令</span>
+                      <a href="/2022/10/20/ubuntu-install/" title="Ubuntu安装">
+                        <span class="hidden-mobile">Ubuntu安装</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -740,16 +782,16 @@
     
       
       
-        <a href="/2022/12/02/function/" title="CentOS 函数"
+        <a href="/2022/10/21/function/" title="CentOS 函数"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">CentOS 函数</span>
         </a>
       
     
       
       
-        <a href="/2022/10/26/centos-Install/" title="CentOS安装"
+        <a href="/2022/10/20/centos-Install/" title="CentOS安装"
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">CentOS安装</span>
@@ -758,7 +800,7 @@
     
       
       
-        <a href="/2022/10/31/command/" title="Linux基础命令"
+        <a href="/2022/10/28/command/" title="Linux基础命令"
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">Linux基础命令</span>
@@ -767,7 +809,7 @@
     
       
       
-        <a href="/2022/12/02/ubuntu-install/" title="Ubuntu安装"
+        <a href="/2022/10/20/ubuntu-install/" title="Ubuntu安装"
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">Ubuntu安装</span>
@@ -802,7 +844,7 @@
     
       
       
-        <a href="/2022/12/05/ansible/" title="Ansible相关操作"
+        <a href="/2022/12/04/ansible/" title="Ansible相关操作"
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">Ansible相关操作</span>
@@ -819,17 +861,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="bash"
         id="heading-d574d4bb40c84861791a694a999cce69" role="tab" data-toggle="collapse" href="#collapse-d574d4bb40c84861791a694a999cce69"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         bash
         <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-d574d4bb40c84861791a694a999cce69"
+      <div class="category-collapse collapse " id="collapse-d574d4bb40c84861791a694a999cce69"
            role="tabpanel" aria-labelledby="heading-d574d4bb40c84861791a694a999cce69">
         
         
@@ -839,9 +881,9 @@
     
       
       
-        <a href="/2022/10/24/bash/" title="Bash变量"
+        <a href="/2022/10/21/bash/" title="Bash变量"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">Bash变量</span>
         </a>
       
@@ -876,7 +918,7 @@
     
       
       
-        <a href="/2022/12/05/jumpserver/" title="Jumpserver部署"
+        <a href="/2022/12/06/jumpserver/" title="Jumpserver部署"
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">Jumpserver部署</span>
