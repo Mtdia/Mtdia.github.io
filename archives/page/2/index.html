@@ -168,17 +168,6 @@
 
 <body>
 
-<!-- 网站背景雪花特效 -->
-<!-- 雪花特效 -->
-<script type="text/javascript">
-  var windowWidth = $(window).width();
-  if (windowWidth > 480) {
-    document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
-  }
-</script>
-<!-- 网站背景雪花特效-结尾 -->
-
-
   
 
   <header>
@@ -422,6 +411,23 @@
 </div>
 
 </div>
+
+
+<div id="tp-weather-widget"></div>
+  <script>
+    (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+    window.SeniverseWeatherWidget('show', {
+      flavor: "slim",
+      location: "WX4G17JWZEK7",
+      geolocation: false,
+      language: "zh-Hans",
+      unit: "c",
+      theme: "auto",
+      token: "5f0f4503-a2dd-4143-a2c3-13faba90b163",
+      hover: "enabled",
+      container: "tp-weather-widget"
+    })
+  </script>
 
   </header>
 
