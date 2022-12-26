@@ -695,9 +695,9 @@
           <div class="container">
             <div class="row">
               <div class="col-12 col-md-10 m-auto">
-                {% extends '_layout.njk' %}
-{% import '_macro/post-collapse.njk' as post_template with context %}
-{% import '_macro/sidebar.njk' as sidebar_template with context %}
+                {% extends '_layout.ejs' %}
+{% import '_macro/post-collapse.ejs' as post_template with context %}
+{% import '_macro/sidebar.ejs' as sidebar_template with context %}
 
 {% block title %}{{ __('title.category') }}: {{ page.category }} | {{ title }}{% endblock %}
 
@@ -706,10 +706,10 @@
 {% block content %}
 
   {%- for post in page.posts.toArray() %}
-    {{ partial('_macro/post.njk', {post: post, is_index: true}) }}
+    {{ partial('_macro/post.ejs', {post: post, is_index: true}) }}
   {%- endfor %}
 
-  {%- include '_partials/pagination.njk' -%}
+  {%- include '_partials/pagination.ejs' -%}
 
 {% endblock %}
 
