@@ -63,7 +63,3 @@ const x= setInterval(()=>{
     document.querySelector('.newYear').style.display = 'block';
    }
 })
-
-
-
-
