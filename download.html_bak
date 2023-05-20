@@ -1,0 +1,107 @@
+---
+title: 下载中心
+layout: download
+permalink: download.html
+---
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>Download What!</title>
+
+  <!-- CSS styles -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 24px;
+      background-color: #6ab04c;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .countdown {
+      font-size: 36px;
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+
+  <!-- JavaScript code -->
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Dec 31, 2023 23:59:59").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="countdown"
+      document.getElementById("countdown").innerHTML = "链接下载有效期： " + days + "天 " + hours + "小时 "
+      + minutes + "分钟 " + seconds + "秒 ";
+
+      // If the count down is over, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "对不起，下载链接已过期";
+        document.getElementById("download-button").disabled = true;
+      }
+    }, 1000);
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Download What!</h1>
+    <p>这里一片空白，什么都没有!</p>
+    <div class="countdown" id="countdown"></div>
+    <a href="/download/hello.txt" download class="button" id="download-button">Download Now</a>
+  </div>
+</body>
+</html>
+
